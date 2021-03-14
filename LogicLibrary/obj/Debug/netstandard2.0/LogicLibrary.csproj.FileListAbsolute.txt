@@ -1,9 +1,0 @@
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\bin\Debug\netstandard2.0\LogicLibrary.deps.json
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\bin\Debug\netstandard2.0\LogicLibrary.dll
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\bin\Debug\netstandard2.0\LogicLibrary.pdb
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.csprojAssemblyReference.cache
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.AssemblyInfoInputs.cache
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.AssemblyInfo.cs
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.dll
-C:\Users\ASUS\source\repos\testAppForDigDes\LogicLibrary\obj\Debug\netstandard2.0\LogicLibrary.pdb
