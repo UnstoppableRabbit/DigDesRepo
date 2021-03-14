@@ -31,13 +31,12 @@ namespace testAppForDigDes
             {
                 if (dict.ContainsKey(word))
                 {
-                    lock(_key)
-                        dict[word]++;
+                    dict.TryUpdate(word, dict[word] + 1, dict[word]);
                 }
                 else
                 {
-                    lock(_key)
-                        dict[word] = 1;
+
+                    dict.TryAdd(word,1);
                 }
             });
             var k = dict.AsParallel().OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
