@@ -8,24 +8,31 @@ namespace testAppForDigDes
 {  
     public class Class1
     { 
-        private List<string> method(string n)
+        private Dictionary<string, int> method(string s)
         {
-            FileStream file = new FileStream(n, FileMode.Open);    
-            StreamReader readFile = new StreamReader(file);        
-            List<string> lines = new List<string>();
-            while (!readFile.EndOfStream)
-            {
-                string s = readFile.ReadLine().ToLower();
-                string[] words = s.Split(new char[] { ' ', ',', '.', '\0', '-', '—', '\"', '&', '*',
-                                                      '!', '?', '(', ')', '\n', '»', '«', ':', ';' });
-                foreach (string word in words)
-                    if (word != "" && word != null)
-                        lines.Add(word);
-            }
-            readFile.Close();
+             
+            List<string> lines = new List<string>();            
+                
+            string[] words = s.Split(new char[] { ' ', ',', '.', '\0', '-', '—', '\"', '&', '*',
+                                                  '!', '?', '(', ')', '\n', '»', '«', ':', ';' });
+            foreach (string word in words)
+                if (word != "" && word != null && word !="\r") 
+                    lines.Add(word);
 
-            var k = lines.GroupBy(g => g).OrderByDescending(g => g.Count()).Select(g => $"{g.Key} {g.Count()}").ToList();
-            return k;
+            var dict = new Dictionary<string, int>();
+            foreach (string word in lines)
+            {
+                if (dict.ContainsKey(word))
+                {
+                    dict[word]++;
+                }
+                else
+                {
+                    dict[word] = 1;
+                }
+            }
+            
+            return dict.OrderByDescending(x => x.Value).ToDictionary(x=>x.Key, x=>x.Value);
         }
     }
 }
